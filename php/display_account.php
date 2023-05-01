@@ -20,6 +20,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="//code.jquery.com/jquery-1.12.4.js"></script>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="../js/search_autocompletion.js"></script>
         <title><?php echo $username . " | connexion" ?></title>
     </head>
     <body style="background-color: <?php echo $_SESSION['color']; ?>">
@@ -61,6 +62,7 @@
             }
             ?>
 
+
         <ul >
             <li><strong>Nom :</strong> <?php echo $user['name'] ?></li>
             <li><strong>Prénom :</strong> <?php echo $user['firstname'] ?></li>
@@ -68,7 +70,7 @@
             <li><strong>Email :</strong> <?php echo $user['email'] ?></li>
         </ul>
 
-        <script src="../js/search_autocompletion.js"></script>
+        <script src="../js/search_autocompletion.js" ></script>
         <script src="../js/drop_image.js"></script>
 
     </body>
