@@ -1,0 +1,21 @@
+CREATE TABLE account (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    firstname VARCHAR(50) NOT NULL,
+    birthdate DATE NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(1000) NOT NULL,
+    username VARVHAR(100) NOT NULL
+);
+
+CREATE TABLE message (
+    id SERIAL NOT NULL,
+    sender_id INT NOT NULL,
+    recipient_id INT NOT NULL,
+    date_time TIMESTAMP NOT NULL,
+    content TEXT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (sender_id) REFERENCES account(id),
+    FOREIGN KEY (recipient_id) REFERENCES account(id)
+);
+
