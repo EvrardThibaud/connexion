@@ -20,10 +20,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="//code.jquery.com/jquery-1.12.4.js"></script>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="../js/search_autocompletion.js"></script>
         <title><?php echo $username . " | connexion" ?></title>
     </head>
-    <body style="background-color: <?php echo $_SESSION['color']; ?>">
 
     
     <?php
@@ -41,23 +39,29 @@
         
         <?php
             if($isConnect){
-                echo "<form id='profilePicture' action='../../php/init_profile_picture.php' method='post' enctype='multipart/form-data'>
-                    <div id='drop-area'>
-                        <input id='profilePictureFile' name='file' type='file' accept='image/' .'*' autocomplete='off'  required title='Cliquer ou droper' >
-                    </div>
-                    <input id='profilePictureSubmit' name='submit' type='submit' value='Utiliser'>
-                </form>";
+                // profile picture
+                echo "<form id='profilePicture' action='../../php/init_profile_picture.php' method='post' enctype='multipart/form-data'>";
+                // form to change profile picture
+                echo "<div id='drop-area'>";
+                echo "<input id='profilePictureFile' name='file' type='file' accept='image/' .'*' autocomplete='off'  required title='Cliquer ou droper' >";
+                echo "</div>";
+                echo "<input id='profilePictureSubmit' name='submit' type='submit' value='Utiliser'>";
+                echo "</form>";
+                // button to update account information
                 echo "<a href='../../account_settings'><button >modifier</button></a>";
+                // form to search an account
                 echo "<form id='search' action='../../php/search_account.php' method='post'>";
                 echo "    <input id='searchUsername' name='username' type='text' placeholder='Nom d&#39;utilisateur' autocomplete='off'>";
                 echo "    <input id='searchSubmit' name='submit' type='submit' value='Rechercher'>";
                 echo "</form>";
                 echo "<ul id='searchResults'></ul>";
+                // Bienvenue / page privé / se déconnecter 
                 echo "<h1>Bienvenue, " . $user['name'] . "</h1>";
                 echo "<p>Voici votre page de profil. Cette page est privée et n'est accessible que par vous.</p>";
                 echo "<p><a href='../../index.php'>se déconnecter</a></p>";
             }
             else{
+                echo "<a href='" . $_SERVER['HTTP_REFERER'] . "'><button>revenir</button></a>";
                 echo "<p>La page public de " . $user['name'] . ".</p>";
             }
             ?>
