@@ -14,6 +14,7 @@
     }
 ?>
 
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -74,7 +75,6 @@
         </ul>
 
         <script src="../../js/search_autocompletion.js" ></script>
-        <script src="../../js/drop_image.js" ></script>
         
 
     </body>

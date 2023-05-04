@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $('#searchUsername').keyup(function() {
-        var query = $(this).val().toLowerCase();
+        var query = $(this).val().toLowerCase(); 
 
         if(query.length > 0) { 
             $.ajax({
-                url: '../php/get_accounts.php',
+                url: '../../php/get_accounts.php',
                 method: 'POST',
                 data: {query:query},
                 success: function(data) {
@@ -13,12 +13,15 @@ $(document).ready(function() {
                 }
             });
         } else { 
-            $('#searchResults').fadeOut();
+             $('#searchResults').fadeOut();
         }
-    })
+    
 
-    $(document).on('click', 'li', function() {
-        $('#searchUsername').val($(this).text());
-        $('#searchResults').fadeOut();
+        $(document).on('click', 'li', function() {
+            $('#searchUsername').val($(this).text());
+            $('#searchResults').fadeOut();
+        });
+
     });
+
 });
