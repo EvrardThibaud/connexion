@@ -2,7 +2,7 @@
     session_start();
 
     $username = substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], '/') + 1, -4);
-    $conn = pg_connect('host=localhost dbname=connexion user=postgres password=T1b0$postgres');
+    include('../../conn_data_base.php');
     $result = pg_query($conn, "SELECT * FROM account WHERE username = '$username'");
     $user = pg_fetch_assoc($result);
 
