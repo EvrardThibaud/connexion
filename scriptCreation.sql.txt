@@ -15,7 +15,7 @@ CREATE TABLE message (
     date_time TIMESTAMP NOT NULL,
     content TEXT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (sender_id) REFERENCES account(id),
-    FOREIGN KEY (recipient_id) REFERENCES account(id)
+    FOREIGN KEY (sender_id) REFERENCES account(id) ON DELETE CASCADE,
+    FOREIGN KEY (recipient_id) REFERENCES account(id) ON DELETE CASCADE
 );
 

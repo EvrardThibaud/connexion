@@ -4,6 +4,6 @@
 
     $username = isset($_POST["username"]) ? pg_escape_string($_POST["username"]) : '';
 
-    header("Location: ../account/$username/$username.php");
+    header("Location: ../account/$username/$username.php?account=$username");
 
 ?>

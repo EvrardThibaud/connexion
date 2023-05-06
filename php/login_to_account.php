@@ -17,7 +17,7 @@
     else if (password_verify($password, $hashedPassword)) {
         include('init_session_user_id.php');
         $username = pg_fetch_result(pg_query($conn, "SELECT username FROM account WHERE email = '$email'"),0,0);
-        header("Location: ../account/$username/$username.php");
+        header("Location: ../account/$username/$username.php?account=$username");
     } 
     else {
         $_SESSION['error_message'] = "Mauvais mot de passe";

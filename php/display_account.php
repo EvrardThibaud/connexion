@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $username = substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], '/') + 1, -4);
+    $username = $_GET['account'];
     include('../../conn_data_base.php');
     $result = pg_query($conn, "SELECT * FROM account WHERE username = '$username'");
     $user = pg_fetch_assoc($result);
@@ -55,16 +55,20 @@
                 echo "    <input id='searchSubmit' name='submit' type='submit' value='Rechercher'>";
                 echo "</form>";
                 echo "<ul id='searchResults'></ul>";
-                // Bienvenue / page privé / se déconnecter 
+                // Bienvenue / page privé / se déconnecter / messagerie
                 echo "<h1>Bienvenue, " . $user['name'] . "</h1>";
                 echo "<p>Voici votre page de profil. Cette page est privée et n'est accessible que par vous.</p>";
                 echo "<p><a href='../../index.php'>se déconnecter</a></p>";
+                echo "<a href='../../menu_direct_message.php'><button>Messagerie</button></a>";
             }
             else{
+                
+                echo "<a href='../../direct_message.php?contact={$user['username']}'><button>envoyer un message</button></a>";
                 echo "<a href='" . $_SERVER['HTTP_REFERER'] . "'><button>revenir</button></a>";
                 echo "<p>La page public de " . $user['name'] . ".</p>";
             }
             ?>
+
 
 
         <ul >
@@ -74,7 +78,8 @@
             <li><strong>Email :</strong> <?php echo $user['email'] ?></li>
         </ul>
 
-        <script src="../../js/search_autocompletion.js" ></script>
+        
+        <script src='../../js/search_autocompletion.js' ></script>
         
 
     </body>
