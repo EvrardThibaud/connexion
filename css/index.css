@@ -1,0 +1,66 @@
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* form */
+
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+}
+
+input{
+    padding: 10px;
+
+    height: 20px;
+    
+    background-color: transparent;
+
+    color: white;
+    
+    border: 3px #61FF00 solid;
+    border-radius: 10px;
+
+    transition: 0.5s;
+}
+
+input:focus{
+    height: 40px;
+
+    caret-color: white;
+
+    outline: none;
+}
+
+input::placeholder {
+    color: white;
+}
+
+#loginEmail{
+    width: 300px;
+}
+
+#loginPassword{
+    width: 280px;
+}
+
+#passwordVisibitlity{
+
+    background-color: transparent;
+
+    position: relative;
+    left: 180px;
+    bottom: 30px; 
+
+    border: none;
+
+    font-size: 20px;
+}
