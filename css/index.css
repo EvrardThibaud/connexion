@@ -113,3 +113,13 @@ input[type=submit]:focus{
     color: #62ff008a;
 }
 
+/* pour les messages d'erreur */
+#errorMessage{
+    position: absolute;
+    bottom: 41.5vh;
+
+    text-align: center;
+
+    height: 10px;
+    width: 320px;
+}

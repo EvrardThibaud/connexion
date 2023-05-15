@@ -28,18 +28,17 @@
         </button>    
     </form>
     
-    <?php
-    if(isset($_SESSION['error_message'])){
-        echo "<p style='color:red'>".$_SESSION['error_message']."</p>";
-        unset($_SESSION['error_message']);
-    }
-    ?>
 
     <div id="divCreateAccount">
         <p>Pas de compte ?</p><a id="linkCreateAccout" href="signup.php">Créez en un maintenant</a>
     </div>
 
-    
+    <?php
+    if(isset($_SESSION['error_message'])){
+        echo "<p id='errorMessage' style='color:red'>".$_SESSION['error_message']."</p>";
+        unset($_SESSION['error_message']);
+    }
+    ?>
 
     <script src="js/password_visibility.js"></script>
 </body>
