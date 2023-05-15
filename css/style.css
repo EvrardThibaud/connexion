@@ -3,10 +3,11 @@
     padding: 0px;
 
     font-family: 'Ubuntu', sans-serif;
+    color: white;
 }
 
 body{
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e
 }
 
 

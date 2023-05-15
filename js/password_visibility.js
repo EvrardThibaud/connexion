@@ -1,3 +1,5 @@
+
+
 function changePasswordVisibilitySignup() {
     var passwordFieldSignup = document.getElementById("signupPassword");
     if (passwordFieldSignup.type === "password") {
@@ -5,6 +7,8 @@ function changePasswordVisibilitySignup() {
     } else {
       passwordFieldSignup.type = "password";
     }
+
+    
   }
 
 function changePasswordVisibilityLogin() {
@@ -15,6 +19,8 @@ function changePasswordVisibilityLogin() {
     } else {
       passwordFieldLogin.type = "password";
     }
+
+    togglePasswordVisibility();
   }
 
 function changePasswordVisibilityAccountsettingNewPassword() {
@@ -32,5 +38,17 @@ function changePasswordVisibilityAccountsettingNewPassword() {
       passwordFieldAccountsettingOldPassword.type = "text";
     } else {
       passwordFieldAccountsettingOldPassword.type = "password";
+    }
+  }
+
+//inverser yeux barrés/pas barrés
+  function togglePasswordVisibility() {
+    var eyeIcon = document.getElementById('eyeIcon');
+    if (eyeIcon.classList.contains('fa-eye')) {
+      eyeIcon.classList.remove('fa-eye');
+      eyeIcon.classList.add('fa-eye-slash');
+    } else {
+      eyeIcon.classList.remove('fa-eye-slash');
+      eyeIcon.classList.add('fa-eye');
     }
   }

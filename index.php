@@ -22,10 +22,10 @@
     <form id="login" action="php/login_to_account.php" method="post">
         <input id="loginEmail" name="email" type="email" autocomplete='off' placeholder="Adresse mail" required title="Veuillez saisir votre email">
         <input id="loginPassword" name="password" type="password" autocomplete='off' placeholder="Mot de passe" required title="Veuillez saisir votre mot de passe">
-        <button id="passwordVisibitlity" type="button" onclick="changePasswordVisibilityLogin()">
-            <span><i class="fa-solid fa-eye " style="color: #ffffff;"></i></span>
-        </button>    
         <input id="loginSubmit" name="submit" type="submit" value="Se connecter">
+        <button id="passwordVisibitlity" type="button" onclick="changePasswordVisibilityLogin()" >
+            <i id="eyeIcon" class="fa-solid fa-eye " style="color: #ffffff;"></i>
+        </button>    
     </form>
     
     <?php
@@ -35,7 +35,9 @@
     }
     ?>
 
-    <p><a href="signup.php">Créer un compte</a></p>
+    <div id="divCreateAccount">
+        <p>Pas de compte ?</p><a id="linkCreateAccout" href="signup.php">Créez en un maintenant</a>
+    </div>
 
     
 
