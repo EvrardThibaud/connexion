@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    
 
     display: flex;
     justify-content: center;
@@ -9,7 +10,7 @@ body{
 
 /* form */
 
-#login{
+#signup{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +18,7 @@ body{
     gap: 10px;
 }
 
-#login legend{
+#signup legend{
     position: relative;
     bottom: 20px;
     align-self: flex-start;
@@ -31,7 +32,7 @@ body{
     color: #62ff007c;
 }
 
-input[type=password],input[type=email],input[type=text]{
+input[type=password],input[type=email],input[type=text],input[type=date]{
     padding: 10px;
 
     height: 20px;
@@ -47,7 +48,7 @@ input[type=password],input[type=email],input[type=text]{
     transition: 0.2s;
 }
 
-input[type=password]:focus,input[type=email]:focus,input[type=text]:focus{
+input[type=password]:focus,input[type=email]:focus,input[type=text]:focus,input[type=date]:focus{
     caret-color: white;
     
     border: none;
@@ -55,9 +56,13 @@ input[type=password]:focus,input[type=email]:focus,input[type=text]:focus{
     outline: none;
 }
 
-input[type=password]::placeholder,input[type=email]::placeholder,input[type=text]::placeholder {
+input[type=password]::placeholder,input[type=email]::placeholder,input[type=text]::placeholder,input[type=date]::placeholder {
     color: white;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
 
 input[type=submit]{
     width: 320px;
@@ -101,9 +106,8 @@ input[type=submit]:focus{
     font-size: 20px;
 }
 
-
 /* lien créer un compte */
-#divCreateAccount{
+#divLoginToAccount{
 
     display: flex;
     justify-content: center;
@@ -114,23 +118,23 @@ input[type=submit]:focus{
     font-size: 0.8em;
 }
 
-#divCreateAccount p{
+#divLoginToAccount p{
     color: rgba(255, 255, 255, 0.5);
 }
 
-#linkCreateAccout{
+#linkLoginToAccount{
     color: #62ff007c;
     text-decoration: none;
 }
 
-#linkCreateAccout:hover{
+#linkLoginToAccount:hover{
     color: #62ff008a;
 }
 
 /* pour les messages d'erreur */
 #errorMessage{
     position: absolute;
-    bottom: 41.5vh;
+    bottom: 25vh;
 
     text-align: center;
 

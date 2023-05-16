@@ -20,6 +20,7 @@
 <body>
 
     <form id="login" action="php/login_to_account.php" method="post">
+        <legend>Connexion à votre compte</legend>
         <input id="loginEmail" name="email" type="email" autocomplete='off' placeholder="Adresse mail" required title="Veuillez saisir votre email">
         <input id="loginPassword" name="password" type="password" autocomplete='off' placeholder="Mot de passe" required title="Veuillez saisir votre mot de passe">
         <input id="loginSubmit" name="submit" type="submit" value="Se connecter">

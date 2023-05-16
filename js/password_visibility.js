@@ -8,6 +8,7 @@ function changePasswordVisibilitySignup() {
       passwordFieldSignup.type = "password";
     }
 
+    togglePasswordVisibility();
     
   }
 
@@ -20,7 +21,14 @@ function changePasswordVisibilityLogin() {
       passwordFieldLogin.type = "password";
     }
 
-    togglePasswordVisibility();
+    var eyeIcon = document.getElementById('eyeIcon');
+    if (eyeIcon.classList.contains('fa-eye')) {
+      eyeIcon.classList.remove('fa-eye');
+      eyeIcon.classList.add('fa-eye-slash');
+    } else {
+      eyeIcon.classList.remove('fa-eye-slash');
+      eyeIcon.classList.add('fa-eye');
+    }
   }
 
 function changePasswordVisibilityAccountsettingNewPassword() {
