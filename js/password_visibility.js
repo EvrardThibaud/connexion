@@ -21,23 +21,7 @@ function changePasswordVisibilityLogin() {
       passwordFieldLogin.type = "password";
     }
 
-    var eyeIcon = document.getElementById('eyeIcon');
-    if (eyeIcon.classList.contains('fa-eye')) {
-      eyeIcon.classList.remove('fa-eye');
-      eyeIcon.classList.add('fa-eye-slash');
-    } else {
-      eyeIcon.classList.remove('fa-eye-slash');
-      eyeIcon.classList.add('fa-eye');
-    }
-  }
-
-function changePasswordVisibilityAccountsettingNewPassword() {
-    var passwordFieldAccountsettingNewPassword = document.getElementById("accountsettingNewPassword");
-    if (passwordFieldAccountsettingNewPassword.type === "password") {
-      passwordFieldAccountsettingNewPassword.type = "text";
-    } else {
-      passwordFieldAccountsettingNewPassword.type = "password";
-    }
+    togglePasswordVisibility();
   }
 
   function changePasswordVisibilityAccountsettingOldPassword() {
@@ -47,7 +31,21 @@ function changePasswordVisibilityAccountsettingNewPassword() {
     } else {
       passwordFieldAccountsettingOldPassword.type = "password";
     }
+    
+    togglePasswordVisibility();
   }
+
+
+  function changePasswordVisibilityAccountsettingNewPassword() {
+      var passwordFieldAccountsettingNewPassword = document.getElementById("accountsettingNewPassword");
+      if (passwordFieldAccountsettingNewPassword.type === "password") {
+        passwordFieldAccountsettingNewPassword.type = "text";
+      } else {
+        passwordFieldAccountsettingNewPassword.type = "password";
+      }
+  
+      togglePasswordVisibility2();
+    }
 
 //inverser yeux barrés/pas barrés
   function togglePasswordVisibility() {
@@ -60,3 +58,15 @@ function changePasswordVisibilityAccountsettingNewPassword() {
       eyeIcon.classList.add('fa-eye');
     }
   }
+
+//pour les deux yeus sur la meme page
+function togglePasswordVisibility2() {
+  var eyeIcon = document.getElementById('eyeIcon2');
+  if (eyeIcon.classList.contains('fa-eye')) {
+    eyeIcon.classList.remove('fa-eye');
+    eyeIcon.classList.add('fa-eye-slash');
+  } else {
+    eyeIcon.classList.remove('fa-eye-slash');
+    eyeIcon.classList.add('fa-eye');
+  }
+}

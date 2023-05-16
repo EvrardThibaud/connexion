@@ -1,0 +1,156 @@
+body{
+    height: 100vh;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* form */
+
+#accountsetting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#accountsetting legend{
+    position: relative;
+    bottom: 20px;
+    align-self: flex-start;
+
+    width: 320px;
+
+    border-bottom: solid 1px #62ff007c;
+    
+    font-size: 1em;
+    font-weight: bold;
+    color: #62ff007c;
+}
+
+input[type=password],input[type=email],input[type=text],input[type=date]{
+    padding: 10px;
+
+    height: 20px;
+    width: 300px;
+    
+    background-color: #252525;
+
+    color: white;
+    
+    border: none;
+    border-bottom: 3px #1e1e1e solid;
+
+    transition: 0.2s;
+}
+
+input[type=password]:focus,input[type=email]:focus,input[type=text]:focus,input[type=date]:focus{
+    caret-color: white;
+    
+    border: none;
+    border-bottom: 3px #61FF00 solid;
+    outline: none;
+}
+
+input[type=password]::placeholder,input[type=email]::placeholder,input[type=text]::placeholder,input[type=date]::placeholder {
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
+input[type=submit]{
+    width: 320px;
+    height: 40px;
+
+    background-color: #62ff007c;
+    
+    border: none;
+
+    color: #1e1e1e;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+input[type=submit]:hover{
+    background-color: #62ff008a;
+    box-shadow: 0px 0px 4px 0px #1d4c008a; 
+}
+
+input[type=submit]:focus{
+    letter-spacing: 0.6px;
+    transition: 0.2s;
+}
+
+/* bouton visibilité du mot de passe */
+.passwordVisibitlity{
+
+    height: 40px;
+    width: 40px;
+
+    background-color: transparent;
+
+    position: relative;
+    
+
+    border: none;
+
+    font-size: 20px;
+}
+
+.passwordVisibitlity:nth-child(2n){
+    bottom: 155px;
+    left: 142px;
+}
+
+.passwordVisibitlity:nth-child(2n+1){
+    bottom: 152px;
+    left: 142px;
+}
+
+/* boutton pour annuler*/
+#cancelModif{
+    position: relative;
+    bottom: 90px;
+    
+    width: 320px;
+    height: 40px;
+
+    background-color: #1e1e1e;
+    
+    border: none;
+
+    color: #62ff007c;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+#cancelModif:hover{
+    background-color: #252525;
+}
+
+#cancelModif:focus{
+    letter-spacing: 0.6px;
+    transition: 0.2s;
+}
+
+
+/* pour les messages d'erreur */
+#errorMessage{
+    position: absolute;
+    bottom: 25vh;
+
+    text-align: center;
+
+    height: 10px;
+    width: 320px;
+}
