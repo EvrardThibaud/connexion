@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50vw;
+    height: auto;
+
+    border: 1px green solid;
+}
+
+.profile-picture{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border: 1px black solid;
+}
