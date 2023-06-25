@@ -18,6 +18,11 @@
     <title>Account Settings</title>
 </head>
 <body>
+
+    <!-- <a id="back" href="account/<?php echo $user['username']."/".$user['username'].".php?account=".$user['username']; ?>">
+        <p>retour</p>
+    </a> -->
+
     <form id="accountsetting" action="php/update_account_information.php" method="post">
         <legend>Modifier vos informations</legend>
         <input id="accountsettingName" name="name" type="text" autocomplete="off" placeholder="Nouveau nom" value="<?php echo $user['name']; ?>" >
@@ -43,7 +48,7 @@
     
     <?php
     if(isset($_SESSION['error_message'])){
-        echo "<p style='color:red'>".$_SESSION['error_message']."</p>";
+        echo "<p id='errorMessage'>".$_SESSION['error_message']."</p>";
         unset($_SESSION['error_message']);
     }
     ?>

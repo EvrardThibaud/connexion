@@ -34,7 +34,7 @@
 
     <?php
     if(isset($_SESSION['error_message'])){
-        echo "<p id='errorMessage' style='color:red'>".$_SESSION['error_message']."</p>";
+        echo "<p id='errorMessage' >".$_SESSION['error_message']."</p>";
         unset($_SESSION['error_message']);
     }
     ?>

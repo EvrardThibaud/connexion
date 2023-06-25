@@ -52,7 +52,7 @@ input[type=password]:focus,input[type=email]:focus,input[type=text]:focus,input[
     caret-color: white;
     
     border: none;
-    border-bottom: 3px #61FF00 solid;
+    border-bottom: 3px #62FF00 solid;
     outline: none;
 }
 
@@ -134,10 +134,12 @@ input[type=submit]:focus{
 /* pour les messages d'erreur */
 #errorMessage{
     position: absolute;
-    bottom: 25vh;
+    bottom: 28vh;
 
     text-align: center;
 
     height: 10px;
     width: 320px;
+
+    color: red;
 }

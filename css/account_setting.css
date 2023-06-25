@@ -1,12 +1,25 @@
 body{
     height: 100vh;
-    
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+/* bouton retour */
+
+#back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    margin: 10px;
+
+    text-decoration: none;
+}
+
+
 
 /* form */
 
@@ -147,10 +160,12 @@ input[type=submit]:focus{
 /* pour les messages d'erreur */
 #errorMessage{
     position: absolute;
-    bottom: 25vh;
+    bottom: 23vh;
 
     text-align: center;
 
     height: 10px;
     width: 320px;
+
+    color:red;
 }

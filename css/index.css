@@ -136,4 +136,6 @@ input[type=submit]:focus{
 
     height: 10px;
     width: 320px;
+
+    color:red;
 }
