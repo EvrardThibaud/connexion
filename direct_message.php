@@ -53,6 +53,8 @@
             <i class="fa-solid fa-paper-plane"></i>
         </button>
     </form>
+
+    <script src="js/scroll_message.js"></script>
     
 </body>
 </html>
