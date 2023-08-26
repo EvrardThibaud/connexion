@@ -103,6 +103,7 @@ button[type=submit]:focus{
     align-items: center;
     flex-direction: column;
 
+    padding-top: 60px;
     margin-bottom: 4%;
 
     overflow-y: auto;
@@ -114,19 +115,28 @@ button[type=submit]:focus{
 }
 
 .message{
-    min-height: 100px;
+    padding: 10px;
+    max-width: 50vw;
 
-    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    line-height: 100%;
+
 }
 
 .sent{
     background-color: red;
     align-self: flex-end;
+    
+    border-radius: 20px 20px 0px 20px ;
 }
 
 .received{
     background-color: green;
     align-self: flex-start;
+    
+    border-radius: 10px 10px 10px 0px ;
 }
 
 /* pour les messages d'erreur */
