@@ -40,7 +40,7 @@
         <?php
             while ($row = pg_fetch_assoc($result)) {
                 if ($row['sender_id'] == $_SESSION['user_id']) {
-                    echo "<div class='sent message'><p >" . $row['content'] . "</p></div>";
+                    echo "<div class='sent message'><p >" . $row['content'] . "</p><p id='messageDate'>".$row['date_time']."</p></div>";
                 } else {
                     echo "<div class='received message'><p >" . $row['content'] . "</p></div>";
                 }

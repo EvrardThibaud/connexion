@@ -23,7 +23,6 @@ body{
 /* form */
 
 #message{
-
     position: absolute;
     bottom: 10px;
 
@@ -95,7 +94,7 @@ button[type=submit]:focus{
 /* pour les messages du chat */
 
 #messageBox{
-    height: 100%;
+    
     width: 90%;
 
     display: flex;
@@ -103,18 +102,37 @@ button[type=submit]:focus{
     align-items: center;
     flex-direction: column;
 
-    padding-top: 60px;
+    padding-right: 22px;
     margin-bottom: 4%;
 
     overflow-y: auto;
 
 }
 
+#messageBox::-webkit-scrollbar {
+    width: 2px;
+}
+  
+#messageBox::-webkit-scrollbar-thumb {
+    background-color: #61FF007c;
+    border-radius: 6px;
+}
+
+#messageBox::-webkit-scrollbar-track {
+    background-color:transparent;
+}
+
+#messageBox::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+  
+
 .scrollSmooth {
     scroll-behavior: smooth;
 }
 
 .message{
+    
     padding: 10px;
     max-width: 50vw;
 
@@ -123,20 +141,28 @@ button[type=submit]:focus{
 
     line-height: 100%;
 
+    text-align: justify;
 }
 
 .sent{
-    background: #62ff007c;
+    background: transparent;
     align-self: flex-end;
     
+    border: #61FF00 solid 1px;
     border-radius: 20px 20px 0px 20px ;
 }
 
 .received{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: #62ff007c;
     align-self: flex-start;
     
     border-radius: 20px 20px 20px 0px ;
+}
+
+#messageDate{
+    color: #ffffff7c;
+    font-size: 12px;
+    text-align: right;
 }
 
 /* pour les messages d'erreur */
